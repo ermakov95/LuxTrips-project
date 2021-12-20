@@ -1,0 +1,228 @@
+.find-form {
+    position: relative;
+    top: -10vw;
+    height: 111vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subtract-top {
+    width: 13vw;
+}
+.subtract {
+    width: 74.7vw;
+    position: relative;
+    top: -1.5vw;
+}
+.find-form-title {
+    width: 82.7vw;
+    height: 14.7vw;
+    position: relative;
+    top: -15.7vw;
+    border-radius: 17.9vw;
+    background-color: white;
+    font-size: 6.88vw;
+    text-transform: uppercase;
+    text-align: center;
+    color: #79655E;
+    padding: 3.47vw;
+    z-index: 1;
+}
+.forms {
+    width: 92vw;
+    height: 96vw;
+    position: absolute;
+    top: 15vw;
+    border-radius: 2.66vw;
+    background-color: white;
+    padding: 10.7vw 4vw 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.form-label {
+    padding: 0 3vw;
+    height: 13.3vw;
+    font-size: 4.8vw;
+}
+.form-title {
+    height: 50%;
+    display: flex;
+    p {
+        display: inline-block;
+        font-family: $secondFontLight;
+        color: #79655E;
+        height: 100%;
+        padding-left: 1vw;
+    }
+    div {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 6.6vw;
+        height: 100%;
+        img {
+            max-width: 4.8vw;
+            max-height: 4.8vw;
+        }
+    }
+}
+.form {
+    font-family: $secondFontMedium;
+    color: #0C0B10;
+    width: 100%;
+    height: 50%;
+    padding-left: 7.4vw;
+}
+.second-forms {
+    height: 13.3vw;
+    padding: 0 3vw;
+    display: flex;
+    justify-content: space-between;
+}
+.second-form-label {
+    display: inline-block;
+    height: 13.3vw;
+    width: 35%;
+    font-size: 4.8vw;
+    &:first-child {
+        width: 60%;
+    }
+}
+.find-button {
+    background: #0C0B10;
+    border-radius: 32.3vw;
+    width: 83.2vw;
+    height: 18.7vw;
+    color: white;
+    font-size: 6.4vw;
+    text-transform: uppercase;
+    font-family: $mainFont;
+}
+@media (min-width: $desktopWidth) {
+    .find-form {
+        top: -5vw;
+        height: 111vw;
+    }
+    .subtract-top {
+        width: 3.33vw;
+    }
+    .subtract {
+        width: 19.4vw;
+        top: -0.3vw;
+    }
+    .find-form-title {
+        width: 22.9vw;
+        height: 3.82vw;
+        top: -3.9vw;
+        border-radius: 4.65vw;
+        font-size: 1.78vw;
+        padding: .9vw;
+    }
+    .forms {
+        width: 77vw;
+        height: 7.92vw;
+        top: 3.9vw;
+        border-radius: 0.694vw;
+        padding: 1.52vw 1.74vw 1.52vw 3.82vw;
+        flex-direction: row;
+    }
+    .form-label {
+        padding: 0.57vw 0;
+        height: 100%;
+        width: 20%;
+        font-size: 1.25vw;
+        &:first-child {
+            width: 30%;
+        }
+    }
+    .form-title {
+        p {
+            padding-left: 0.25vw;
+        }
+        div {
+            width: 1.74vw;
+            img {
+                max-width: 1.25vw;
+                max-height: 1.25vw;
+            }
+        }
+    }
+    .form {
+        padding-left: 2vw;
+    }
+    .second-forms {
+        height: 100%;
+        padding: 0.694vw 0;
+        width: 30%;
+    }
+    .second-form-label {
+        height: 100%;
+        font-size: 1.25vw;
+    }
+    .find-button {
+        border-radius: 8.4vw;
+        width: 12.5%;
+        height: 4.86vw;
+        font-size: 1.67vw;
+    }
+}
+@media (min-width: $lrDesktopWidth) {
+    .find-form {
+        top: -3vw;
+        height: 170vw;
+    }
+    .subtract-top {
+        width: 48.6px;
+    }
+    .subtract {
+        width: 280px;
+        top: -7px;
+    }
+    .find-form-title {
+        width: 330px;
+        height: 55px;
+        top: -57px;
+        border-radius: 67px;
+        font-size: 25px;
+        padding: 13px;
+    }
+    .forms {
+        width: 1110px;
+        height: 115px;
+        top: 55px;
+        border-radius: 10px;
+        padding: 22px 25px 22px 55px;
+    }
+    .form-label {
+        padding: 10px 0;
+        font-size: 18px;
+    }
+    .form-title {
+        p {
+            padding-left: 5px;
+        }
+        div {
+            width: 18px;
+            img {
+                max-width: 18px;
+                max-height: 18px;
+            }
+        }
+    }
+    .form {
+        padding-left: 23px;
+    }
+    .second-forms {
+        padding: 10px 0;
+    }
+    .second-form-label {
+        font-size: 18px;
+    }
+    .find-button {
+        border-radius: 121px;
+        height: 70px;
+        font-size: 24px;
+    }
+}

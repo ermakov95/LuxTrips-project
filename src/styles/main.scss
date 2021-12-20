@@ -1,0 +1,20 @@
+@import './utils/reset.scss';
+@import './utils/fonts.scss';
+@import './utils/vars.scss';
+
+body {
+    font-family: $mainFont;
+    button, a {
+        transition: all 100ms linear 0s;
+        &:hover {
+            cursor: pointer;
+            opacity: 75%;
+        }
+        &:active {
+            cursor: pointer;
+            opacity: 50%;
+        }
+    }
+}
+
+@import "./modules/footer";

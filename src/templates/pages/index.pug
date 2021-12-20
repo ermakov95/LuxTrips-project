@@ -1,0 +1,176 @@
+extends ../layouts/without-header
+
+block variables
+  - var title = 'Lux Trips';
+  - var description = 'Lux Trips';
+
+block content
+  header.parallax.nav-opened
+    .nav.nav_opened.nav_nojs
+      .logo-main(href="/index.html")
+        a(href="/index.html")
+          img(src="~@/img/index/logo.svg", alt="Logo Lux Trips")
+      .logo-call-me
+        a(href="#")
+          img.logo-call-me_desktop(src="~@/img/index/big-call-me.svg", alt="Logo Lux Trips")
+          img.logo-call-me_mobile(src="~@/img/index/small-call-me.svg", alt="Logo Lux Trips")
+      .nav-toggle
+        button.nav-toggle__button(type="button")
+          div
+          div
+          div
+      .nav-items
+        .nav-items-inner
+          a.nav-items__item(href="/index.html") Home
+          a.nav-items__item(href="#") Luxury packages
+          a.nav-items__item(href="#") Book with us
+          a.nav-items__item(href="#") Why Lux Trips
+          a.nav-items__item(href="#") Contact
+          a.nav-items__item(href="#") Client Area
+    .intro
+      .first-bg.intro-bg
+        picture.intro-bg-mobile
+          source(media="(min-width: 641px)", srcset="~@/img/index/1-bg-mobile@910w.webp, ~@/img/index/1-bg-mobile@1820w.webp 2x", type="image/webp", alt="Первый фон", loading="lazy")
+          source(media="(min-width: 641px)", srcset="~@/img/index/1-bg-mobile@910w.jpg, ~@/img/index/1-bg-mobile@1820w.jpg 2x", type="image/jpeg", alt="Первый фон", loading="lazy")
+          source(media="(max-width: 640px)", srcset="~@/img/index/1-bg-mobile@640w.webp, ~@/img/index/1-bg-mobile@1280w.webp 2x", type="image/webp", alt="Первый фон", loading="lazy")
+          source(media="(max-width: 640px)", srcset="~@/img/index/1-bg-mobile@640w.jpg, ~@/img/index/1-bg-mobile@1280w.jpg 2x", type="image/jpeg", alt="Первый фон", loading="lazy")
+          img.intro-bg-mobile(src="~@/img/index/1-bg-mobile@910w.jpg", type="image/jpeg", alt="Первый фон", loading="lazy")
+        picture.intro-bg-desktop
+          source(media="(min-width: 1441px)", srcset="~@/img/index/1-bg-desktop@1920w.webp, ~@/img/index/1-bg-desktop@3840w.webp 2x", type="image/webp", alt="Первый фон", loading="lazy")
+          source(media="(min-width: 1441px)", srcset="~@/img/index/1-bg-desktop@1920w.jpg, ~@/img/index/1-bg-desktop@3840w.jpg 2x", type="image/jpeg", alt="Первый фон", loading="lazy")
+          source(media="(max-width: 1440px)", srcset="~@/img/index/1-bg-desktop@1440w.webp, ~@/img/index/1-bg-desktop@2880w.webp 2x", type="image/webp", alt="Первый фон", loading="lazy")
+          source(media="(max-width: 1440px)", srcset="~@/img/index/1-bg-desktop@1440w.jpg, ~@/img/index/1-bg-desktop@2880w.jpg 2x", type="image/jpeg", alt="Первый фон", loading="lazy")
+          img.intro-bg-desktop(src="~@/img/index/1-bg-desktop@1440w.jpg", type="image/jpeg", alt="Первый фон", loading="lazy")
+      h1.heading-first the world’s most
+      .second-bg.intro-bg
+        picture.intro-bg-mobile
+          source(media="(min-width: 641px)", srcset="~@/img/index/2-bg-mobile@910w.webp, ~@/img/index/2-bg-mobile@1820w.webp 2x", type="image/webp", alt="Второй фон", loading="lazy")
+          source(media="(min-width: 641px)", srcset="~@/img/index/2-bg-mobile@910w.png, ~@/img/index/2-bg-mobile@1820w.png 2x", type="image/png", alt="Второй фон", loading="lazy")
+          source(media="(max-width: 640px)", srcset="~@/img/index/2-bg-mobile@640w.webp, ~@/img/index/2-bg-mobile@1280w.webp 2x", type="image/webp", alt="Второй фон", loading="lazy")
+          source(media="(max-width: 640px)", srcset="~@/img/index/2-bg-mobile@640w.png, ~@/img/index/2-bg-mobile@1280w.png 2x", type="image/png", alt="Второй фон", loading="lazy")
+          img.intro-bg-mobile(src="~@/img/index/2-bg-mobile@910w.png", type="image/png", alt="Второй фон", loading="lazy")
+        picture.intro-bg-desktop
+          source(media="(min-width: 1441px)", srcset="~@/img/index/2-bg-desktop@1920w.webp, ~@/img/index/2-bg-desktop@3840w.webp 2x", type="image/webp", alt="Второй фон", loading="lazy")
+          source(media="(min-width: 1441px)", srcset="~@/img/index/2-bg-desktop@1920w.png, ~@/img/index/2-bg-desktop@3840w.png 2x", type="image/png", alt="Второй фон", loading="lazy")
+          source(media="(max-width: 1440px)", srcset="~@/img/index/2-bg-desktop@1440w.webp, ~@/img/index/2-bg-desktop@2880w.webp 2x", type="image/webp", alt="Второй фон", loading="lazy")
+          source(media="(max-width: 1440px)", srcset="~@/img/index/2-bg-desktop@1440w.png, ~@/img/index/2-bg-desktop@2880w.png 2x", type="image/png", alt="Второй фон", loading="lazy")
+          img.intro-bg-desktop(src="~@/img/index/2-bg-desktop@1440w.png", type="image/png", alt="Второй фон", loading="lazy")
+      img.rhomb-intro-left-top(src="~@/img/index/Vector-intro.svg", alt="Векторный ромб", loading="lazy")
+      h2.heading.heading-second-top extra ordinary
+      .third-bg.intro-bg
+        picture.intro-bg-mobile
+          source(media="(min-width: 641px)", srcset="~@/img/index/3-bg-mobile@910w.webp, ~@/img/index/3-bg-mobile@1820w.webp 2x", type="image/webp", alt="Третий фон", loading="lazy")
+          source(media="(min-width: 641px)", srcset="~@/img/index/3-bg-mobile@910w.png, ~@/img/index/3-bg-mobile@1820w.png 2x", type="image/png", alt="Третий фон", loading="lazy")
+          source(media="(max-width: 640px)", srcset="~@/img/index/3-bg-mobile@640w.webp, ~@/img/index/3-bg-mobile@1280w.webp 2x", type="image/webp", alt="Третий фон", loading="lazy")
+          source(media="(max-width: 640px)", srcset="~@/img/index/3-bg-mobile@640w.png, ~@/img/index/3-bg-mobile@1280w.png 2x", type="image/png", alt="Третий фон", loading="lazy")
+          img.intro-bg-mobile(src="~@/img/index/3-bg-mobile@910w.png", type="image/png", alt="Третий фон", loading="lazy")
+        picture.intro-bg-desktop
+          source(media="(min-width: 1441px)", srcset="~@/img/index/3-bg-desktop@1920w.webp, ~@/img/index/3-bg-desktop@3840w.webp 2x", type="image/webp", alt="Третий фон", loading="lazy")
+          source(media="(min-width: 1441px)", srcset="~@/img/index/3-bg-desktop@1920w.png, ~@/img/index/3-bg-desktop@3840w.png 2x", type="image/png", alt="Третий фон", loading="lazy")
+          source(media="(max-width: 1440px)", srcset="~@/img/index/3-bg-desktop@1440w.webp, ~@/img/index/3-bg-desktop@2880w.webp 2x", type="image/webp", alt="Третий фон", loading="lazy")
+          source(media="(max-width: 1440px)", srcset="~@/img/index/3-bg-desktop@1440w.png, ~@/img/index/3-bg-desktop@2880w.png 2x", type="image/png", alt="Третий фон", loading="lazy")
+          img.intro-bg-desktop(src="~@/img/index/3-bg-desktop@1440w.png", type="image/png", alt="Третий фон", loading="lazy")
+      img.rhomb-intro-right-top(src="~@/img/index/Vector-intro.svg", alt="Векторный ромб", loading="lazy")
+      img.rhomb-intro-center(src="~@/img/index/Vector-intro.svg", alt="Векторный ромб", loading="lazy")
+      h2.heading.heading-second-bottom places
+      img.rhomb-intro-right-bottom(src="~@/img/index/Vector-intro.svg" alt="Векторный ромб", loading="lazy")
+      .fourth-bg.intro-bg
+        picture.intro-bg-mobile
+          source(media="(min-width: 641px)", srcset="~@/img/index/4-bg-mobile@910w.webp, ~@/img/index/4-bg-mobile@1820w.webp 2x", type="image/webp", alt="Четвёртый фон", loading="lazy")
+          source(media="(min-width: 641px)", srcset="~@/img/index/4-bg-mobile@910w.png, ~@/img/index/4-bg-mobile@1820w.png 2x", type="image/png", alt="Четвёртый фон", loading="lazy")
+          source(media="(max-width: 640px)", srcset="~@/img/index/4-bg-mobile@640w.webp, ~@/img/index/4-bg-mobile@1280w.webp 2x", type="image/webp", alt="Четвёртый фон", loading="lazy")
+          source(media="(max-width: 640px)", srcset="~@/img/index/4-bg-mobile@640w.png, ~@/img/index/4-bg-mobile@1280w.png 2x", type="image/png", alt="Четвёртый фон", loading="lazy")
+          img.intro-bg-mobile(src="~@/img/index/4-bg-mobile@910w.png", type="image/png", alt="Четвёртый фон", loading="lazy")
+        picture.intro-bg-desktop
+          source(media="(min-width: 1441px)", srcset="~@/img/index/4-bg-desktop@1920w.webp, ~@/img/index/4-bg-desktop@3840w.webp 2x", type="image/webp", alt="Четвёртый фон", loading="lazy")
+          source(media="(min-width: 1441px)", srcset="~@/img/index/4-bg-desktop@1920w.png, ~@/img/index/4-bg-desktop@3840w.png 2x", type="image/png", alt="Четвёртый фон", loading="lazy")
+          source(media="(max-width: 1440px)", srcset="~@/img/index/4-bg-desktop@1440w.webp, ~@/img/index/4-bg-desktop@2880w.webp 2x", type="image/webp", alt="Четвёртый фон", loading="lazy")
+          source(media="(max-width: 1440px)", srcset="~@/img/index/4-bg-desktop@1440w.png, ~@/img/index/4-bg-desktop@2880w.png 2x", type="image/png", alt="Четвёртый фон", loading="lazy")
+          img.intro-bg-desktop(src="~@/img/index/4-bg-desktop@1440w.png", type="image/png", alt="Четвёртый фон", loading="lazy")
+      img.rhomb-intro-left-bottom(src="~@/img/index/Vector-intro.svg", alt="Векторный ромб", loading="lazy")
+      .gradient
+    .find-form
+      img.subtract-top(src="~@/img/index/Subtract-top.svg", alt="Subtract-top")
+      img.subtract(src="~@/img/index/Subtract.svg", alt="Subtract")
+      h3.find-form-title find your journey
+      form.forms(action="#") 
+        label.form-label
+          .form-title
+            div
+              img(src="~@/img/index/icon_destination.png", alt="Иконка", loading="lazy")
+            p Destination
+          input.form(type="text" name="Destination" placeholder="Where are you going?")
+        label.form-label
+          .form-title
+            div
+              img(src="~@/img/index/icon_travel.png", alt="Иконка", loading="lazy")
+            p Travel type
+          input.form(type="text" name="Travel type" placeholder="Adventure Travel")
+        .second-forms 
+          label.second-form-label
+            .form-title 
+              div
+                img(src="~@/img/index/icon_calendar.png", alt="Иконка", loading="lazy")
+              p When
+            input.form(type="date" name="When" placeholder="Введите имя")
+          label.second-form-label
+            .form-title
+              div
+                img(src="~@/img/index/icon_travellers.png", alt="Иконка", loading="lazy")
+              p Travellers
+            input.form(type="number" name="Travellers" placeholder="2")
+        button.find-button Find
+  .body-inner
+    .top-rated
+      .top-rated-title 
+        img(src="~@/img/index/Vector-top-rated.svg", alt="Иконка", loading="lazy")
+        div Top Rated Experiences
+      .top-rated-choice
+        .choice-radio
+          label.radio-form
+            input.radio(type="radio" name="radio" value="slide" checked)
+            div World
+          label.radio-form
+            input.radio(type="radio" name="radio" value="africa")
+            div Africa
+          label.radio-form
+            input.radio(type="radio" name="radio" value="asia")
+            div Asia
+          label.radio-form
+            input.radio(type="radio" name="radio" value="europe")
+            div Europe
+          label.radio-form
+            input.radio(type="radio" name="radio" value="north-america")
+            div North America
+          label.radio-form
+            input.radio(type="radio" name="radio" value="south-america")
+            div South America
+          label.radio-form
+            input.radio(type="radio" name="radio" value="antarctica")
+            div Antarctica
+          label.radio-form
+            input.radio(type="radio" name="radio" value="australia")
+            div Australia
+      .top-rated-slider
+        img.slider-button.slider-back(src="~@/img/index/arrow.svg", alt="Кнопка слайдера назад", loading="lazy")
+        .slider-inner 
+          .slider-line
+            .slide.europe
+              img(src="~@/img/index/snow.jpg", alt="Снег", loading="lazy")
+            .slide.south-america
+              img(src="~@/img/index/mount.jpg", alt="Горы", loading="lazy")
+            .slide.north-america
+              img(src="~@/img/index/snow.jpg", alt="Снег", loading="lazy")
+            .slide.asia
+              img(src="~@/img/index/mount.jpg", alt="Горы", loading="lazy")
+            .slide.antarctica
+              img(src="~@/img/index/snow.jpg", alt="Снег", loading="lazy")
+            .slide.africa
+              img(src="~@/img/index/mount.jpg", alt="Горы", loading="lazy")
+            .slide.north-america
+              img(src="~@/img/index/snow.jpg", alt="Снег", loading="lazy")
+            .slide.europe
+              img(src="~@/img/index/mount.jpg", alt="Горы", loading="lazy")
+            .slide.australia
+              img(src="~@/img/index/snow.jpg", alt="Снег", loading="lazy")
+        img.slider-button.slider-next(src="~@/img/index/arrow.svg", alt="Кнопка слайдера вперёд", loading="lazy")

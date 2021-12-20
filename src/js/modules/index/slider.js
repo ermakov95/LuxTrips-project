@@ -69,13 +69,13 @@ for (let trip of trips) {
     sliderLine.insertAdjacentHTML("beforeend", code)
 }
 
-const slide = document.querySelector('.slide')
 const slides = document.querySelectorAll('.slide')
+
 const sliderInnerWeight = () => {
     return sliderInner.offsetWidth
 }
-const slideWeight = () => {
-    return slide.offsetWidth
+const slideWeight = (selector) => {
+    return document.querySelector(`.${checked}`).offsetWidth
 }
 
 let countSlide = sliderLine.querySelectorAll('.slide').length;
@@ -108,11 +108,11 @@ document.querySelector('.choice-radio').addEventListener('click', function(){
 			checked = radio.value;
 		}
 	}
-    for (let slid of slides) {
-        if (slid.classList[0] == checked || slid.classList[1] == checked) {
-            slid.style.display = 'grid'
+    for (let slide of slides) {
+        if (slide.classList[0] == checked || slide.classList[1] == checked) {
+            slide.style.display = 'grid'
         } else {
-            slid.style.display = 'none'
+            slide.style.display = 'none'
         }
 	}
     setSliderWidth(`.${checked}`)
@@ -122,24 +122,32 @@ document.querySelector('.choice-radio').addEventListener('click', function(){
 
 document.querySelector('.slider-next').addEventListener('click', function(){
     index++
-    if (slideWeight() > sliderInnerWeight() / 2) {
+    if (sliderInnerWeight() < 910) {
         if (index > countSlide) {index = 1} 
+    } else if (countSlide < 4) {
+        index = 1
     } else {
         if (index > countSlide - 2) {index = 1} 
     }
-    sliderLine.style.left = -((index-1)*(slideWeight())) + 'px';
+    sliderLine.style.left = -((index-1)*(slideWeight(checked))) + 'px';
 });
 
 document.querySelector('.slider-back').addEventListener('click', function(){
     index--
-    if (slideWeight() > sliderInnerWeight() / 2) {
+    if (sliderInnerWeight() < 910) {
         if (index <= 0) {index = countSlide} 
+    } else if (countSlide < 4) {
+        index = 1
     } else {
-        if (index <= 0) {index = countSlide - 2} 
+        if (index <= 0) {index = countSlide - 2}
     }
-    sliderLine.style.left = -((index-1)*slideWeight()) + 'px';
+    sliderLine.style.left = -((index-1)*slideWeight(checked)) + 'px';
 });
 document.addEventListener("DOMContentLoaded", function(event)
 {window.onresize = function() {
     setSliderWidth(`.${checked}`);
+    if (sliderInnerWeight() >= 910 && index > countSlide - 2) {
+        index = countSlide - 2
+    }
+    sliderLine.style.left = -((index-1)*slideWeight(checked)) + 'px';
 };});

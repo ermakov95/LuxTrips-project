@@ -1,9 +1,76 @@
+import trips from '../../database/trips.js';
 const sliderInner = document.querySelector('.slider-inner');
 const sliderLine = document.querySelector('.slider-line');
-const slide = document.querySelector('.slide')
-const slides = document.querySelectorAll('.slide')
 const radios = document.querySelectorAll('.radio')
 
+for (let trip of trips) {
+    let slide__rating = ""
+    let vector = '<img src="./img/index/Vector-rating.svg" alt="Векторный ромб" loading="lazy">'
+    let vectorWhite = '<img src="./img/index/Vector-rating-white.svg" alt="Векторный ромб" loading="lazy">'
+    if (+trip[5] >= 4.5) {
+        slide__rating = `									
+        <div class="slide__rating">
+        <p>${trip[5]}</p>
+        ${vectorWhite + vectorWhite + vectorWhite + vectorWhite + vectorWhite}
+        </div>`
+    } else if (+trip[5] >= 3.5) {
+        slide__rating = `									
+        <div class="slide__rating">
+        <p>${trip[5]}</p>
+        ${vector + vectorWhite + vectorWhite + vectorWhite + vectorWhite}
+        </div>`
+    } else if (+trip[5] >= 2.5) {
+        slide__rating = `									
+        <div class="slide__rating">
+        <p>${trip[5]}</p>
+        ${vector + vector + vectorWhite + vectorWhite + vectorWhite}
+        </div>`
+    } else if (+trip[5] >= 1.5) {
+        slide__rating = `									
+        <div class="slide__rating">
+        <p>${trip[5]}</p>
+        ${vector + vector + vector + vectorWhite + vectorWhite}
+        </div>`
+    } else if (+trip[5] >= 0.5) {
+        slide__rating = `									
+        <div class="slide__rating">
+        <p>${trip[5]}</p>
+        ${vector + vector + vector + vector + vectorWhite}
+        </div>`
+    } else {
+        slide__rating = `									
+        <div class="slide__rating">
+        <p>${trip[5]}</p>
+        ${vector + vector + vector + vector + vector}
+        </div>`
+    }
+    let slide__button = trip[6] ? `<a class="slide__button" href="${trip[6]}">customise</a>` : ''
+    let slide__inner = `
+        <div class="slide-inner">
+            <div class="slide__text">
+                <p>${trip[2]}</p>
+                <p>${trip[3]}</p>
+            </div>
+            <div class="slide__price">
+                <p>FROM</p>
+                <p>${trip[4]}</p>
+            </div>
+            ${slide__rating}
+            ${slide__button}
+        </div>`
+    let code = `
+        <div class="slide ${trip[0]}">
+            <picture class="slide__img">
+                <source srcset="./img/${trip[1]}@760w.webp, ./img/${trip[1]}@1520w.webp 2x" type="image/webp" alt="${trip[3]}" loading="lazy">
+                <source srcset="./img/${trip[1]}@760w.jpg, ./img/${trip[1]}@1520w.jpg 2x" type="image/jpg" alt="${trip[3]}" loading="lazy">
+                <img class="slide__img" src="./img/${trip[1]}@760w.jpg" type="image/jpg" alt="${trip[3]}" loading="lazy"></picture>
+            ${slide__inner}
+        </div>`
+    sliderLine.insertAdjacentHTML("beforeend", code)
+}
+
+const slide = document.querySelector('.slide')
+const slides = document.querySelectorAll('.slide')
 const sliderInnerWeight = () => {
     return sliderInner.offsetWidth
 }

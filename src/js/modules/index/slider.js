@@ -34,9 +34,8 @@ const setSliderWidth = selector => {
 setSliderWidth('.slide')
 
 let index = 1;
-
+let checked = 'slide'
 document.querySelector('.choice-radio').addEventListener('click', function(){
-    let checked = ''
     for (let radio of radios) {
 		if (radio.checked) {
 			checked = radio.value;
@@ -44,7 +43,7 @@ document.querySelector('.choice-radio').addEventListener('click', function(){
 	}
     for (let slid of slides) {
         if (slid.classList[0] == checked || slid.classList[1] == checked) {
-            slid.style.display = 'block'
+            slid.style.display = 'grid'
         } else {
             slid.style.display = 'none'
         }
@@ -75,5 +74,5 @@ document.querySelector('.slider-back').addEventListener('click', function(){
 });
 document.addEventListener("DOMContentLoaded", function(event)
 {window.onresize = function() {
-    setSliderWidth();
+    setSliderWidth(`.${checked}`);
 };});

@@ -3,6 +3,20 @@
 body {
     background-color: #E2D3CE;
 }
+.link {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background: no-repeat center / 50px 20px url("@/img/index/GitHub.png");
+    z-index: 5;
+    opacity: .5;
+    &:hover {
+        opacity: .75
+    }
+    &:active {
+        opacity: 1
+    }
+}
 .parallax {
     width: 100vw;
     display: flex;
@@ -25,11 +39,21 @@ body {
     background: linear-gradient(180deg, rgba(#E2D3CE, 0) 0%, #E2D3CE 9.7vw, #E2D3CE 100%);
 }
 @media (min-width: $desktopWidth) {
+    .link {
+        width: 55px;
+        height: 22px;
+        background-size: 55px 22px
+    }
     .parallax {
         height: 60vw;
     }
 }
 @media (min-width: $lrDesktopWidth) {
+    .link {
+        width: 4.166vw;
+        height: 1.666vw;
+        background-size: 4.166vw 1.666vw
+    }
     .parallax {
         height: 57.5vw;
     }

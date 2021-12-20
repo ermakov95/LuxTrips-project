@@ -1,11 +1,11 @@
 {
-  "name": "Sedona-project",
-  "version": "2.0.0",
-  "description": "My first project - Sedona",
+  "name": "LuxTrips-project",
+  "version": "0.0.5",
+  "description": "My third project - LuxTrips",
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ermakov95/Sedona-project"
+    "url": "https://github.com/ermakov95/LuxTrips-project"
   },
   "author": {
     "name": "Ivan Ermakov",

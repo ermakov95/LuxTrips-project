@@ -6,7 +6,7 @@ export default [
         "Winter Park Ski Holiday", // title
         "€ 1490", // price
         "4.2", // rating
-        '' // is there a button
+        '' // link to the page
     ],
     [
         "south-america", // class name
@@ -15,7 +15,7 @@ export default [
         "Machu Picchu", // title
         "€ 2300", // price
         "5.0", // rating
-        '#' // is there a button
+        '#' // link to the page
     ],
     [
         "europe",

@@ -1,0 +1,243 @@
+.intro {
+    position: relative;
+    top: -70px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intro-bg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+.intro-bg-mobile {
+    width: 100%;
+    height: auto;
+}
+.intro-bg-desktop {
+    display: none;
+}
+.first-bg {
+    top: -10vw;
+    z-index: -10;
+}
+.heading-first {
+    height: 40vw;
+    width: 30vw;
+    padding-top: 25vw;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4.53vw;
+    line-height: 98%;
+    letter-spacing: 0.3em;
+    color: #0C0B10;
+}
+.second-bg {
+    top: 54.5vw;
+    z-index: -6;
+}
+.rhomb-intro-left-top {
+    position: absolute;
+    top: 65vw;
+    left: -1vw;
+    z-index: -5;
+    width: 4.53vw;
+}
+.heading-second-top {
+    height: 36.8vw;
+    padding-top: 11.5vw;
+    z-index: -5;
+}
+.heading {
+    font-size: 19.2vw;
+    line-height: 12.3vw;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FCFCFC;
+}
+.third-bg {
+    top: 71.3vw;
+    z-index: -4;
+}
+.rhomb-intro-right-top {
+    position: absolute;
+    top: 68.6vw;
+    right: 11.5vw;
+    z-index: -3;
+    width: 4.26vw;
+}
+.rhomb-intro-center {
+    position: absolute;
+    top: 62vw;
+    z-index: -3;
+    width: 19.4vw;
+}
+.heading-second-bottom {
+    height: 24.8vw;
+    padding-top: 5.76vw;
+    z-index: -2;
+}
+.rhomb-intro-right-bottom {
+    position: absolute;
+    top: 80.4vw;
+    right: -1vw;
+    z-index: -2;
+    width: 8.8vw;
+}
+.fourth-bg {
+    top: 84.4vw;
+    z-index: -1;
+}
+.rhomb-intro-left-bottom {
+    position: absolute;
+    top: 94vw;
+    left: 6.26vw;
+    z-index: -2;
+    width: 7.33vw;
+}
+.gradient {
+    position: absolute;
+    top: 117vw;
+    width: 100%;
+    height: 106vw;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(#E2D3CE, 0) 0%, #E2D3CE 50%, #E2D3CE 100%);
+}
+
+@media (min-width: $desktopWidth) {
+    .intro {
+        top: -6.95vw;
+    }
+    .intro-bg-mobile {
+        display: none;
+    }
+    .intro-bg-desktop {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .first-bg {
+        top: 0;
+    }
+    .heading-first {
+        height: 13.8vw;
+        width: 9.58vw;
+        padding-top: 8.88vw;
+        font-size: 1.74vw;
+    }
+    .second-bg {
+        top: 24.8vw;
+    }
+    .rhomb-intro-left-top {
+        top: 26.4vw;
+        left: 12.1vw;
+        width: 1.87vw;
+    }
+    .heading-second-top {
+        height: 22.5vw;
+        padding-top: 4.8vw;
+    }
+    .heading {
+        font-size: 13.7vw;
+        line-height: 8.95vw;
+    }
+    .third-bg {
+        top: 30.1vw;
+    }
+    .rhomb-intro-right-top {
+        top: 31.4vw;
+        right: 12.6vw;
+        width: 1.8vw;
+    }
+    .rhomb-intro-center {
+        top: 31.2vw;
+        width: 8vw;
+    }
+    .heading-second-bottom {
+        height: 10vw;
+        padding-top: 0.5vw;
+        font-size: 9.83vw;
+    }
+    .rhomb-intro-right-bottom {
+        top: 39.4vw;
+        right: 15.6vw;
+        width: 3.61vw;
+    }
+    .fourth-bg {
+        top: 40.9vw;
+    }  
+    .rhomb-intro-left-bottom {
+        top: 36.4vw;
+        left: 5vw;
+        width: 3.61vw;
+    }  
+    .gradient {
+        top: 46vw;
+        height: 24.3vw;
+        background: linear-gradient(180deg, rgba(#E2D3CE, 0) 0%, #E2D3CE 100%);
+    }
+}
+@media (min-width: $lrDesktopWidth) {
+    .intro {
+        top: -100px;
+    }  
+    .heading-first {
+        height: 11.8vw;
+        width: 9.58vw;
+        padding-top: 6.88vw;
+        font-size: 1.74vw;
+    }
+    .second-bg {
+        top: 22.8vw;
+    }
+    .rhomb-intro-left-top {
+        top: 24.4vw;
+        left: 12.1vw;
+        width: 1.87vw;
+    }
+    .heading-second-top {
+        height: 22.5vw;
+        padding-top: 4.8vw;
+    }
+    .heading {
+        font-size: 13.7vw;
+        line-height: 8.95vw;
+    }
+    .third-bg {
+        top: 28.1vw;
+    }
+    .rhomb-intro-right-top {
+        top: 29.4vw;
+        right: 12.6vw;
+        width: 1.8vw;
+    }
+    .rhomb-intro-center {
+        top: 29.2vw;
+        width: 8vw;
+    }
+    .heading-second-bottom {
+        height: 10vw;
+        padding-top: 0.5vw;
+        font-size: 9.83vw;
+    }
+    .rhomb-intro-right-bottom {
+        top: 37.4vw;
+        right: 15.6vw;
+        width: 3.61vw;
+    }
+    .fourth-bg {
+        top: 38.9vw;
+    }  
+    .rhomb-intro-left-bottom {
+        top: 34.4vw;
+        left: 5vw;
+        width: 3.61vw;
+    }  
+    .gradient {
+        top: 44vw;
+    }
+}

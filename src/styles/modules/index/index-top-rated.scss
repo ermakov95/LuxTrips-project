@@ -1,0 +1,405 @@
+.top-rated {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+}
+.top-rated-title {
+    height: 57.33vw;
+    width: 55vw;
+    padding-top: 14.67vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    img {
+        height: 42.67vw;
+        width: 22.67vw;
+    }
+    div {
+        font-size: 10.67vw;
+        text-align: center;
+        position: absolute;
+        bottom: 9vw
+    }
+}
+.top-rated-choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    padding-top: 5vw;
+}
+.choice-radio {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 39vw 0 42.5vw ;
+    width: 340vw;
+    min-width: 100%;
+    max-width: 1270px;
+    height: 14vw;  
+    color: #79655E;
+    font-size: 6.4vw; 
+    overflow-x: auto;
+    input {
+        display: none;
+    }
+    &::-webkit-scrollbar { width: 0;}
+}
+.radio-form {
+    div {
+        white-space: nowrap;
+        height: 100%; 
+        margin: 0 5vw;
+    }
+    &:first-child div {
+        margin-left: 0;
+    } 
+    &:last-child div {
+        margin-right: 0;
+    } 
+    &>input:checked+div {
+        color: #0C0B10;
+        background: no-repeat center bottom / 4.8vw 3.2vw url("@/img/index/Vector-choice.svg");
+    }
+}
+.trips-slider {
+    height: 136vw;
+    width: 100vw;
+    position: relative;
+}
+.slider-button {
+    position: absolute;
+    height: 20vw;
+    width: 20vw;
+    z-index: 2;
+    right: -2.1vw;
+    top: 58vw;;
+    &:first-child {
+        transform: rotate(180deg);
+        left: -2.1vw;
+    }
+}
+.trips-slider-inner {
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+}
+.trips-slider-line {
+    width: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6vw;
+    position: relative;
+    left: 0;
+    transition: all ease 0.5s;
+}
+.trips-slide {
+    width: 88vw;
+    min-width: 88vw;
+    height: 100%;
+    padding: 0 2vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 43% 57%;
+}
+.trips-slide__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    border-radius: 2.666vw;
+}
+.trips-slide-inner {
+    z-index: 1;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0B2034 100%);
+    border-radius: 2.666vw;
+    padding: 8vw;
+    display: grid;
+    grid-template-columns: 35% 55% 10%;
+    grid-template-rows: 1fr 11.7% 15.7%;
+    color: white;
+}
+.trips-slide__text {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    p {
+        &:first-child {
+            font-family: $secondFontMedium;
+            font-size: 2.93vw;
+            padding-left: 2.5vw;
+            background: no-repeat left center / 1.93vw 2.66vw url("@/img/index/Vector-place.svg");
+        }
+        &:last-child {
+            font-size: 8.53vw;
+        }
+    }
+}
+.trips-slide__price {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    p {
+        &:first-child {
+            font-family: $secondFontMedium;
+            font-size: 2.93vw;
+        }
+        &:last-child {
+            font-size: 5.6vw;
+        }
+    }
+}
+.trips-slide__rating {
+    grid-row: 1/4;
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    p {
+        font-family: $secondFontMedium;
+        font-size: 2.93vw;
+        padding-bottom: 2vw;
+    }
+    img {
+        height: 4.266vw;
+        width: 2.4vw;
+    }
+}
+.trips-slide__button {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    width: 90%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 100vw;
+    text-transform: uppercase;
+    font-size: 3.733vw;
+    text-align: center;
+    padding: 2.5vw;
+    color: white;
+}
+
+@media (min-width: $desktopWidth) {
+    .top-rated-title {
+        height: 18.75vw;
+        width: 20vw;
+        padding-top: 4.166vw;
+        img {
+            max-height: 14.58vw;
+            max-width: 7.639vw;
+        }
+        div {
+            font-size: 4.166vw;
+            bottom: 2.43vw
+        }
+    }
+    .top-rated-choice {
+        padding-top: 0.7vw;
+    }
+    .choice-radio {
+        width: 77vw;
+        max-width: 950px;
+        height: 2.5vw;  
+        font-size: 1.666vw; 
+        padding: 0;
+    }
+    .radio-form {
+        div {
+            margin: 0;
+        }
+        &>input:checked+div {
+            background-size: 1.25vw 0.8333vw;
+        }
+    }
+    .trips-slider {
+        height: 39.58vw;
+        width: 100%;
+        padding-top: 1.736vw;
+    }
+    .slider-button {
+        height: 5.2vw;
+        width: 5.2vw;
+        right: 7.8vw;
+        top: 18.5vw;
+        &:first-child {
+            left: 7.8vw;
+        }
+    }
+    .trips-slider-inner {
+        width: 100vw;
+    }
+    .trips-slider-line {
+        padding: 0 10.417vw;
+        left: 0;
+    }
+    .trips-slide {
+        min-width: 26.388vw;
+        width: 26.388vw;
+        padding: 0 1.041vw;
+    }
+    .trips-slide__img {
+        border-radius: 0.7vw;
+    }
+    .trips-slide-inner {
+        border-radius: 0.7vw;
+        padding: 2.43vw;
+    }
+    .trips-slide__text {
+        p {
+            &:first-child {
+                font-size: 0.833vw;
+                padding-left: 1vw;
+                background-size: 0.555vw 0.764vw;
+            }
+            &:last-child {
+                font-size: 2.5vw;
+            }
+        }
+    }
+    .trips-slide__price {
+        p {
+            &:first-child {
+                font-size: 0.833vw;
+            }
+            &:last-child {
+                font-size: 1.666vw;
+            }
+        }
+    }
+    .trips-slide__rating {
+        p {
+            font-size: 0.833vw;
+            padding-bottom: 0.5vw;
+        }
+        img {
+            height: 1.25vw;
+            width: 0.694vw;
+        }
+    }
+    .trips-slide__button {
+        font-size: 1.111vw;
+        padding: 0.7vw;
+    }
+}
+@media (min-width: $lrDesktopWidth) {
+    .top-rated-title {
+        height: 270px;
+        width: 288px;
+        padding-top: 60px;
+        img {
+            max-height: 210px;
+            max-width: 110px;
+        }
+        div {
+            font-size: 60px;
+            bottom: 35px;
+        }
+    }
+    .top-rated-choice {
+        padding-top: 10px;
+    }
+    .choice-radio {
+        height: 37px;  
+        font-size: 24px; 
+        padding: 0;
+    }
+    .radio-form {
+        &>input:checked+div {
+            background-size: 18px 12px;
+        }
+    }
+    .trips-slider {
+        height: 570px;
+        padding-top: 25px;
+    }
+    .slider-button {
+        height: 75px;
+        width: 75px;
+        right: 112px;
+        top: 270px;
+        &:first-child {
+            left: 112px;
+        }
+    }
+    .trips-slider-inner {
+        width: 1440px;
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 110px;
+            height: 100%;
+            z-index: 2;
+        }
+        &::before {
+            right: 0;
+            background: linear-gradient(90deg, rgba(#E2D3CE, 0) 0%, #E2D3CE 100%);
+        }
+        &::after {
+            left: 0;
+            background: linear-gradient(-90deg, rgba(#E2D3CE, 0) 0%, #E2D3CE 100%);
+        }
+    }
+    .trips-slider-line {
+        padding: 0 150px;
+        left: 0;
+    }
+    .trips-slide {
+        min-width: 380px;
+        width: 380px;
+        padding: 0 15px;
+    }
+    .trips-slide__img {
+        border-radius: 10px;
+    }
+    .trips-slide-inner {
+        border-radius: 10px;
+        padding: 35px;
+    }
+    .trips-slide__text {
+        p {
+            &:first-child {
+                font-size: 12px;
+                padding-left: 10px;
+                background-size: 8px 11px;
+            }
+            &:last-child {
+                font-size: 36px;
+            }
+        }
+    }
+    .trips-slide__price {
+        p {
+            &:first-child {
+                font-size: 12px;
+            }
+            &:last-child {
+                font-size: 24px;
+            }
+        }
+    }
+    .trips-slide__rating {
+        p {
+            font-size: 12px;
+            padding-bottom: 5px;
+        }
+        img {
+            height: 18px;
+            width: 10px;
+        }
+    }
+    .trips-slide__button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

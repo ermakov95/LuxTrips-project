@@ -37,6 +37,37 @@ body {
     max-width: 100vw;
     background: linear-gradient(180deg, rgba(#E2D3CE, 0) 0%, #E2D3CE 9.7vw, #E2D3CE 100%);
 }
+.lp-background {
+    position: relative;
+    bottom: 30vw;
+    width: 100%;
+    height: 155vw;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+    }
+    &::before{
+        top: 0;
+        height: 40%;
+        background: linear-gradient(180deg, #E2D3CE 0%, rgba(#E2D3CE, 0) 100%);
+    }
+    &::after {
+        bottom: 0;
+        height: 60%;
+        background: linear-gradient(0deg, #E2D3CE 0%, rgba(#E2D3CE, 0) 100%);
+    }
+}
+.lp-bg-mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.lp-bg-desktop {
+    display: none;
+}
 @media (min-width: $desktopWidth) {
     .link {
         width: 55px;
@@ -45,6 +76,18 @@ body {
     }
     .parallax {
         height: 60vw;
+    }
+    .lp-background {
+        height: 68vw;
+    }
+    .lp-bg-mobile {
+        display: none;
+    }
+    .lp-bg-desktop {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 @media (min-width: $lrDesktopWidth) {
@@ -56,9 +99,10 @@ body {
     .parallax {
         height: 57.5vw;
     }
-    // .body-inner {
-    //     background: linear-gradient(180deg, rgba(#E2D3CE, 0) 0%, #E2D3CE 60px, #E2D3CE 100%);
-    // }
+    .lp-background {
+        height: 980px;
+        bottom: 400px;
+    }
 }
 
 @import "../modules/index/*";

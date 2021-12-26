@@ -1,0 +1,177 @@
+.lux-trips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: -110vw;
+    padding-top: 40vw;
+}
+.lux-trips-bg {
+    position: absolute;
+    top: 25vw;
+    left: 0;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+    }
+    &::before{
+        top: 0;
+        height: 30%;
+        background: linear-gradient(180deg, #E2D3CE 0%, rgba(#E2D3CE, 0) 100%);
+    }
+    &::after {
+        bottom: 0;
+        height: 30%;
+        background: linear-gradient(0deg, #E2D3CE 0%, rgba(#E2D3CE, 0) 100%);
+    }
+    &_mobile {
+        object-fit: cover;
+    }
+    &_desktop {
+        display: none;
+    }
+}
+.lux-trips-inner {
+    z-index: 1;
+    width: 100%;
+    padding: 0 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+        font-size: 10.67vw;
+        line-height: 100%;
+        text-align: center;
+        padding-bottom: 6.666vw;
+    }
+    &__text {
+        &:nth-child(2n) {
+            font-family: $secondFontMedium;
+            font-size: 4.266vw;
+        }
+        &:nth-child(3) {
+            padding: 86.666vw 17.333vw 8vw 6.667vw;
+            font-size: 10.67vw;
+        }
+        &:nth-child(4) {
+            padding-left: 34.666vw;
+        }
+        &:nth-child(5) {
+            font-size: 6.933vw;
+            padding: 8vw 0 8vw 34.666vw;
+        }
+    }
+    &__button {
+        width: 92vw;
+        height: 16vw;
+        padding: 4.5vw;
+        border-radius: 26.4vw;
+        border: 1px solid #0C0B10;
+        font-size: 6.4vw;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+@media (min-width: $desktopWidth) {
+    .lux-trips {
+        top: -57vw;
+        padding-top: 32vw;
+    }
+    .lux-trips-bg {
+        top: 25vw;
+        &_mobile {
+            display: none;
+        }
+        &_desktop {
+            display: block;
+            object-fit: cover;
+        }
+    }
+    .lux-trips-inner {
+        width: 44.1vw;
+        padding: 0;
+        display: none;
+        grid-template-columns: 17.7vw 24.652vw;
+        grid-template-rows: 12.84vw 29.86vw 18.05vw 18vw 3.125vw 2.638vw; 
+        &__title {
+            font-size: 4.166vw;
+            line-height: 100%;
+            text-align: left;
+            padding-bottom: 0;
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        &__text {
+            &:nth-child(2n) {
+                font-size: 1.111vw;
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+            &:nth-child(3) {
+                padding: 0;
+                font-size: 2.777vw;
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+            &:nth-child(4) {
+                padding-left: 0;
+                grid-row: 3/4;
+            }
+            &:nth-child(5) {
+                padding: 0;
+                font-size: 2.777vw;
+                grid-column: 2/3;
+                grid-row: 5/6;
+            }
+        }
+        &__button {
+            width: 14.93vw;
+            height: 2.638vw;
+            padding: 0.694vw;
+            border-radius: 4.2;
+            font-size: 1.111vw;
+            grid-column: 2/3;
+            grid-row: 7/8;
+        }
+    }
+}
+@media (min-width: $lrDesktopWidth) {
+    .lux-trips {
+        top: -730px;
+        padding-top: 120px;
+    }
+    .lux-trips-bg {
+        top: 25vw;
+    }
+    .lux-trips-inner {
+        width: 635px;
+        grid-template-columns: 255px 355px;
+        grid-template-rows: 185px 430px 260px 260px 45px 38px;
+        &__title {
+            font-size: 60px;
+        }
+        &__text {
+            &:nth-child(2n) {
+                font-size: 16px;
+            }
+            &:nth-child(3) {
+                font-size: 40px;
+            }
+            &:nth-child(5) {
+                font-size: 40px;
+            }
+        }
+        &__button {
+            width: 215px;
+            height: 38px;
+            padding: 10px;
+            border-radius: 61px;
+            font-size: 16px;
+        }
+    }
+}

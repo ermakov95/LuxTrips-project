@@ -11,6 +11,7 @@
     position: absolute;
     top: 25vw;
     left: 0;
+    width: 100%;
     &::before, &::after {
         content: '';
         position: absolute;
@@ -29,6 +30,7 @@
         background: linear-gradient(0deg, #E2D3CE 0%, rgba(#E2D3CE, 0) 100%);
     }
     &_mobile {
+        width: 100%;
         object-fit: cover;
     }
     &_desktop {
@@ -80,24 +82,29 @@
 @media (min-width: $desktopWidth) {
     .lux-trips {
         top: -57vw;
-        padding-top: 32vw;
+        padding-top: 8.333vw;
     }
     .lux-trips-bg {
-        top: 25vw;
+        height: 60.42vw;
+        max-height: 1200px;
+        top: 0;
         &_mobile {
             display: none;
         }
         &_desktop {
             display: block;
             object-fit: cover;
+            width: 100%;
+            height: 100%;
         }
     }
     .lux-trips-inner {
-        width: 44.1vw;
+        width: 44.444vw;
         padding: 0;
-        display: none;
-        grid-template-columns: 17.7vw 24.652vw;
-        grid-template-rows: 12.84vw 29.86vw 18.05vw 18vw 3.125vw 2.638vw; 
+        display: grid;
+        align-items: start;
+        grid-template-columns: 19.791vw 24.652vw;
+        grid-template-rows: 35vw 24.3vw 20.486vw 2.639vw; 
         &__title {
             font-size: 4.166vw;
             line-height: 100%;
@@ -108,25 +115,26 @@
         }
         &__text {
             &:nth-child(2n) {
+                padding-right: 6.944vw;
                 font-size: 1.111vw;
                 grid-column: 2/3;
                 grid-row: 1/2;
             }
             &:nth-child(3) {
-                padding: 0;
+                padding: 0 2vw 0 0;
                 font-size: 2.777vw;
                 grid-column: 1/2;
-                grid-row: 3/4;
+                grid-row: 2/3;
             }
             &:nth-child(4) {
                 padding-left: 0;
-                grid-row: 3/4;
+                grid-row: 2/3;
             }
             &:nth-child(5) {
                 padding: 0;
                 font-size: 2.777vw;
                 grid-column: 2/3;
-                grid-row: 5/6;
+                grid-row: 3/4;
             }
         }
         &__button {
@@ -136,7 +144,7 @@
             border-radius: 4.2;
             font-size: 1.111vw;
             grid-column: 2/3;
-            grid-row: 7/8;
+            grid-row: 4/5;
         }
     }
 }
@@ -145,21 +153,20 @@
         top: -730px;
         padding-top: 120px;
     }
-    .lux-trips-bg {
-        top: 25vw;
-    }
     .lux-trips-inner {
-        width: 635px;
-        grid-template-columns: 255px 355px;
-        grid-template-rows: 185px 430px 260px 260px 45px 38px;
+        width: 640px;
+        grid-template-columns: 285px 355px;
+        grid-template-rows: 35vw 350px 295px 38px; 
         &__title {
             font-size: 60px;
         }
         &__text {
             &:nth-child(2n) {
+                padding-right: 100px;
                 font-size: 16px;
             }
             &:nth-child(3) {
+                padding: 0 30px 0 0;
                 font-size: 40px;
             }
             &:nth-child(5) {
@@ -168,7 +175,7 @@
         }
         &__button {
             width: 215px;
-            height: 38px;
+            height: 100%;
             padding: 10px;
             border-radius: 61px;
             font-size: 16px;

@@ -322,14 +322,15 @@ block content
           source(media="(max-width: 1440px)", srcset="~@/img/index/lt-bg-desktop@1440w.webp, ~@/img/index/lt-bg-desktop@2880w.webp 2x", type="image/webp", alt="Первый фон", loading="lazy")
           source(media="(max-width: 1440px)", srcset="~@/img/index/lt-bg-desktop@1440w.jpg, ~@/img/index/lt-bg-desktop@2880w.jpg 2x", type="image/jpeg", alt="Первый фон", loading="lazy")
           img.lux-trips-bg_desktop(src="~@/img/index/lt-bg-desktop@1440w.jpg", type="image/jpeg", alt="Первый фон", loading="lazy")
-      .lux-trips-inner 
-        .lux-trips-inner__title Why <br> Lux Trips
-        .lux-trips-inner__text As Travel Designer, we know the ins and outs of travel from who to work with, where to go, when to book, and which restaurant provides the most authentic cuisine. 
-        .lux-trips-inner__text Exclusive knowledge to provide the best of the best to clients
-        .lux-trips-inner__text Our area of expertise ranges from luxury resorts and villas/chalets holiday bookings, private yacht and jet charters, to exclusive tours and personalized journey planning. 
-        .lux-trips-inner__text We craft and plan unique itineraries tailored to customers’ interests and with strong attention to detail
-        .lux-trips-inner__button help me plan a trip
-      //- picture.4-lt-img
-      //-   source(media="(min-width: 1440px)", srcset="~@/img/index/4-lt-img@245w.webp, ~@/img/index/4-lt-img@490w.webp 2x", type="image/webp", alt="Первый фон", loading="lazy")
-      //-   source(media="(min-width: 1440px)", srcset="~@/img/index/4-lt-img@245w.jpg, ~@/img/index/4-lt-img@490w.jpg 2x", type="image/jpeg", alt="Первый фон", loading="lazy")
-      //-   img.4-lt-img(src="~@/img/index/4-lx-img@245w.jpg", type="image/jpeg", alt="Первый фон", loading="lazy")
+      .lux-trips-wrapper 
+        .lux-trips-inner
+          .lux-trips-inner__title Why <br> Lux Trips
+          .lux-trips-inner__text As Travel Designer, we know the ins and outs of travel from who to work with, where to go, when to book, and which restaurant provides the most authentic cuisine. 
+          .lux-trips-inner__text Exclusive knowledge to provide the best of the best to clients
+          .lux-trips-inner__text Our area of expertise ranges from luxury resorts and villas/chalets holiday bookings, private yacht and jet charters, to exclusive tours and personalized journey planning. 
+          .lux-trips-inner__text We craft and plan unique itineraries tailored to customers’ interests and with strong attention to detail
+          .lux-trips-inner__button help me plan a trip
+        picture.fourth-lt-img
+          source(srcset="~@/img/index/4-lt-img@245w.webp, ~@/img/index/4-lt-img@490w.webp 2x", type="image/webp", alt="Первый фон", loading="lazy")
+          source(srcset="~@/img/index/4-lt-img@245w.jpg, ~@/img/index/4-lt-img@490w.jpg 2x", type="image/jpeg", alt="Первый фон", loading="lazy")
+          img.fourth-lt-img(src="~@/img/index/4-lt-img@245w.jpg", type="image/jpeg", alt="Первый фон", loading="lazy")

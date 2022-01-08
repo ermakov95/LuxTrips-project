@@ -2,12 +2,6 @@ module.exports = {
 	test: /\.pug$/i,
 	oneOf: [
 		{
-			resourceQuery: /^\?vue/,
-			use: [{
-				loader: 'pug-plain-loader',
-			}],
-		},
-		{
 			use: [
 				{
 					loader: 'html-loader',

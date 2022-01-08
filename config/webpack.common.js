@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlReplaceWebpackPlugin = require('html-replace-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -62,7 +61,6 @@ module.exports = {
 	},
 	plugins: [
 		new CaseSensitivePathsPlugin(),
-		new VueLoaderPlugin(),
 		new CopyWebpackPlugin({
 			patterns: [{
 				from: `${PATHS.src}/${PATHS.assets.static}`,

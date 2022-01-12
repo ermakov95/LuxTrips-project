@@ -52,22 +52,22 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-}
-.nav-toggle__button {
-    width: 60px;
-    height: 26px;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    background: none;
-    div{
-        height: 1px;
+    &__button {
         width: 60px;
-        border-bottom: #FFFFFF 1px solid;
-        &:first-child {
-            width: 45px;
+        height: 26px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        background: none;
+        div{
+            height: 1px;
+            width: 60px;
+            border-bottom: #FFFFFF 1px solid;
+            &:first-child {
+                width: 45px;
+            }
         }
     }
 }
@@ -75,6 +75,15 @@
     grid-row: 2/3;
     grid-column: 1/4;
     background: no-repeat center /  260px 510px url(@/img/index/Vector-menu.svg);
+    &__item {
+        height: 90px;
+        width: 100%;
+        color: black;
+        text-align: center;
+        font-size: 24px;
+        line-height: 26px;
+        padding: 33px;
+    }
 }
 .nav-items-inner {
     display: flex;
@@ -82,15 +91,6 @@
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
-}
-.nav-items__item {
-    height: 90px;
-    width: 100%;
-    color: black;
-    text-align: center;
-    font-size: 24px;
-    line-height: 26px;
-    padding: 33px;
 }
 
 @media (min-width: $desktopWidth) {

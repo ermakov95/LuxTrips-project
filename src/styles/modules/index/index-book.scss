@@ -57,8 +57,12 @@
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        border-radius: 2.667vw; 
+        img, picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2.667vw; 
+        }
     }
 }
 
@@ -102,7 +106,7 @@
                 height: 8.819vw;
             }
         }
-        &__bg {
+        &__bg img, picture {
             border-radius: .7vw;
         }
     }
@@ -141,7 +145,7 @@
                 height: 127px;
             }
         }
-        &__bg {
+        &__bg img, picture {
             border-radius: 10px;
         }
     }

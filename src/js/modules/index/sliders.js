@@ -25,10 +25,13 @@ for (let trip of trips) {
     let slide__button = trip[6] ? `<a class="trips-slide__button" href="${trip[6]}">customise</a>` : '';
     let code = `
         <div class="trips-slide ${trip[0]}">
-            <picture class="trips-slide__img">
-                <source srcset="./img/${trip[1]}@760w.webp, ./img/${trip[1]}@1520w.webp 2x" type="image/webp" alt="${trip[3]}" loading="lazy">
-                <source srcset="./img/${trip[1]}@760w.jpg, ./img/${trip[1]}@1520w.jpg 2x" type="image/jpg" alt="${trip[3]}" loading="lazy">
-                <img class="trips-slide__img" src="./img/${trip[1]}@760w.jpg" type="image/jpg" alt="${trip[3]}" loading="lazy"></picture>
+            <div class="trips-slide__img">
+                <picture>
+                    <source srcset="./img/${trip[1]}@760w.webp, ./img/${trip[1]}@1520w.webp 2x" type="image/webp" alt="${trip[3]}" loading="lazy">
+                    <source srcset="./img/${trip[1]}@760w.jpg, ./img/${trip[1]}@1520w.jpg 2x" type="image/jpg" alt="${trip[3]}" loading="lazy">
+                    <img src="./img/${trip[1]}@760w.jpg" type="image/jpg" alt="${trip[3]}" loading="lazy">
+                </picture>
+            </div>
             <div class="trips-slide-inner">
                 <div class="trips-slide__text">
                     <p>${trip[2]}</p>

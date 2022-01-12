@@ -4,15 +4,15 @@
 
 body {
     font-family: $mainFont;
-    button, a {
+    button, a, .slider-button {
         transition: all 100ms linear 0s;
         &:hover {
             cursor: pointer;
-            opacity: 75%;
+            opacity: 80%;
         }
         &:active {
             cursor: pointer;
-            opacity: 50%;
+            opacity: 60%;
         }
     }
 }

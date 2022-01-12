@@ -9,7 +9,6 @@
 }
 .lux-trips-bg {
     position: absolute;
-    top: 25vw;
     left: 0;
     width: 100%;
     &::before, &::after {
@@ -63,9 +62,10 @@
         &:nth-child(2n) {
             font-family: $secondFontMedium;
             font-size: 4.266vw;
+            line-height: 179.8%;
         }
         &:nth-child(3) {
-            padding: 86.666vw 17.333vw 8vw 6.667vw;
+            padding: 92vw 17.333vw 8vw 6.667vw;
             font-size: 10.67vw;
         }
         &:nth-child(4) {
@@ -87,42 +87,69 @@
         text-align: center;
     }
 }
-.lux-trips-imgs {
-    position: absolute;
+.lt-img img, picture {
     width: 100%;
     height: 100%;
-    max-width: 1110px;
+    object-fit: cover;
 }
 .first-lt-img {
-    object-fit: cover;
     width: 24.533vw;
     height: 54.666vw;
-    border-radius: 2vw;
     position: absolute;
-    top: 38vw;
-    left: 2vw;
+    top: 66vw;
+    left: 4vw;
+    img, picture {
+        border-radius: 2vw;  
+    }
 }
-.second-lt-img {
+.rhomb-lux-trips-first {
+    position: absolute;
+    top: 112.8vw;
+    left: 12.2vw;
+    width: 8.266vw;
+}
+.second-lt-img, .rhomb-lux-trips-second {
     display: none;
 }
+.rhomb-lux-trips-center {
+    position: absolute;
+    top: 80vw;
+    left: 40.4vw;
+    width: 19.2vw;
+}
 .third-lt-img {
-    object-fit: cover;
     width: 27.2vw;
     height: 60.533vw;
-    border-radius: 2vw;
     position: absolute;
-    top: 42vw;
-    right: 2vw;
+    top: 102vw;
+    right: 4vw;
+    img, picture {
+        border-radius: 2vw;  
+    }
+}
+.rhomb-lux-trips-third {
+    position: absolute;
+    top: 153.8vw;
+    right: 13vw;
+    width: 9.173vw;
 }
 .fourth-lt-img {
-    object-fit: cover;
     width: 38vw;
     height: 85.5vw;
-    border-radius: 3vw;
     position: absolute;
-    top: 103vw;
+    top: 219vw;
     left: -4vw;
+    img, picture {
+        border-radius: 3vw;  
+    }
 }
+.rhomb-lux-trips-fourth {
+    position: absolute;
+    top: 289vw;
+    left: 0;
+    width: 16.32vw;
+}
+
 
 @media (min-width: $desktopWidth) {
     .lux-trips {
@@ -132,7 +159,7 @@
     .lux-trips-bg {
         height: 60.42vw;
         max-height: 1200px;
-        top: 0;
+        top: 9vw;
         &_mobile {
             display: none;
         }
@@ -152,7 +179,7 @@
         display: grid;
         align-items: start;
         grid-template-columns: 19.791vw 24.652vw;
-        grid-template-rows: 35vw 24.3vw 20.486vw 2.639vw; 
+        grid-template-rows: 40vw 24.3vw 20.486vw 2.639vw; 
         &__title {
             font-size: 4.166vw;
             line-height: 100%;
@@ -196,35 +223,69 @@
         }
     }
     .first-lt-img {
-        width: 4.86vw;
-        height: 10.76vw;
-        border-radius: 0.4vw;
-        top: 9vw;
-        left: 12.5vw;
+        width: 6.218vw;
+        height: 13.891vw;
+        top: 14vw;
+        left: 25vw;
+        img, picture {
+            border-radius: 0.4vw;  
+        }
+    }
+    .rhomb-lux-trips-first {
+        top: 25.6vw;
+        left: 26.85vw;
+        width: 2.5vw;
     }
     .second-lt-img {
         display: block;
-        object-fit: cover;
         width: 5.069vw;
         height: 11.319vw;
-        border-radius: 0.5vw;
         position: absolute;
-        top: 7.8vw;
-        right: 14.2vw;
+        top: 15.6vw;
+        right: 28.4vw;
+        img, picture {
+            border-radius: 0.5vw;  
+        }
+    }
+    .rhomb-lux-trips-second {
+        display: block;
+        position: absolute;
+        top: 25.2vw;
+        right: 30vw;
+        width: 1.712vw;
+    }
+    .rhomb-lux-trips-center {
+        top: 15vw;
+        left: 46.111vw;
+        width: 7.777vw;
     }
     .third-lt-img {
         width: 10.069vw;
         height: 22.43vw;
-        border-radius: 0.7vw;
-        top: 12vw;
+        top: 27vw;
         right: 0;
+        img, picture {
+            border-radius: 0.7vw;  
+        }
+    }
+    .rhomb-lux-trips-third {
+        top: 46.2vw;
+        right: 3.4vw;
+        width: 3.4vw;
     }
     .fourth-lt-img {
         width: 17vw;
         height: 37.84vw;
-        border-radius: 0.9vw;
-        top: 27vw;
-        left: 6vw;
+        top: 58.6vw;
+        left: 12vw;
+        img, picture {
+            border-radius: 0.9vw;  
+        }
+    }
+    .rhomb-lux-trips-fourth {
+        top: 90vw;
+        left: 17vw;
+        width: 6.844vw;
     }
 }
 @media (min-width: $lrDesktopWidth) {
@@ -232,10 +293,13 @@
         top: -730px;
         padding-top: 120px;
     }
+    .lux-trips-bg {
+        top: 80px;
+    }
     .lux-trips-inner {
         width: 640px;
         grid-template-columns: 285px 355px;
-        grid-template-rows: 35vw 350px 295px 38px; 
+        grid-template-rows: 38vw 350px 295px 38px; 
         &__title {
             font-size: 60px;
         }
@@ -262,23 +326,43 @@
     }
     .first-lt-img {
         border-radius: 6px;
-        top: 25%;
+        top: 14.5vw;
+    }
+    .rhomb-lux-trips-first {
+        top: 43%;
     }
     .second-lt-img {
         border-radius: 7px;
-        top: 7.8vw;
+        top: 15.6vw;
+    }
+    .rhomb-lux-trips-second {
+        top: 25.3vw
+    }
+    .rhomb-lux-trips-center {
+        width: 112px;
+        top: 18vw;
+        left: calc(50% - 56px);
     }
     .third-lt-img {
         width: 145px;
         height: 323px;
         border-radius: 9px;
-        top: 14vw;
+        top: 34vw;
+    }
+    .rhomb-lux-trips-third {
+        top: calc(34vw + 276.26px);
+        width: 49px;
     }
     .fourth-lt-img {
         width: 245px;
         height: 545px;
         border-radius: 13px;
-        top: calc(17.5vw + 135px);
-        left: 85px;
+        top: calc(38vw + 270px);
+        left: 170px;
+    }
+    .rhomb-lux-trips-fourth {
+        width: 98.56px;
+        top: calc(38vw + 721px);
+        left: 243px;
     }
 }

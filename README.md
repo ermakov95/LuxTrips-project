@@ -1,3 +1,1 @@
-# LuxTrips-project
-My third project
-Мой третий проект
+## Vanilla.JS, PUG, SCSS, Webpack
